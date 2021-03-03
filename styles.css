@@ -9,7 +9,7 @@ table {
 }
 
 td {
-  background: #47b75e;
+  background: #50A576;
   border: 1px solid #d4fcdb;
   min-width: 24px;
   height: 27px;
@@ -71,19 +71,19 @@ td {
 }
 
 .tw {
-  background:#E60000;
+  background:#FE3130;
 }
 .dw {
-  background:#F86969;
+  background:#FBC888;
 }
 .tl {
-  background:#3675FA;
+  background:#4FCDFF;
 }
 .dl {
-  background:#22ACD8;
+  background:#A0E3FD;
 }
 .start {
-  background:#ff5500;
+  background:#FBC888;
 }
 
 .color_instruction {
