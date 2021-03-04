@@ -10,8 +10,7 @@ Multiplayer live on https://scrabble.77177.de/multiplayer
 things to do
 ============
 
-- change interface, maybe using something similar to https://rawgit.com/danielweck/scrabble-html-ui/master/index.html (drag and drop of tiles)
-- if not, at least make it possible to hide semitransparent overlay when clicking on it
+- change interface, maybe using something similar to https://rawgit.com/danielweck/scrabble-html-ui/master/index.html (drag and drop of tiles); if not, at least make it possible to hide semitransparent overlay when clicking on it
 - add Esperanto vocabulary
 - add Esperanto grammar check (to confirm words built with affixes)
 - add Esperanto grammar check (to suggest words to A.I.)
