@@ -18,13 +18,17 @@ td {
 	font-size: 1.3rem;
 }
 
+.litero {
+    background-color: white;
+    border: 1px solid black;
+}
+
 .puzzleSquare {
 	margin: 5px 5px 5px 0;
 	height: 7vw;
 	width: 7vw;
 	text-transform: uppercase;
 	background-color: white;
-	border: 1px solid black;
 	font: 5vw sans-serif;
 	border-radius: 5px;
 	cursor: pointer;
@@ -41,7 +45,7 @@ td {
 }
 
 #input_container .puzzleSquare:hover {
-		background-color: orange;
+	background-color: orange;
 }
 
 #input_container {
@@ -126,6 +130,11 @@ td {
 
 .ki_set_tile {
 	background: #d3f7db;
+}
+
+.set_tile {
+    background: white;
+	box-shadow: inset 1px 1px 1px 1px rgb(255 255 255 / 46%), inset -1px -1px 1px 1px rgb(0 0 0 / 26%);
 }
 
 .language_selector a {
