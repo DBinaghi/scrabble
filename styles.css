@@ -1,163 +1,174 @@
 body {
-  background: #3b874b;
-  font-family: Verdana,Arial,Helvetica,sans-serif;
-  padding: 20px;
+	background: white;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	padding: 20px;
 }
 
 table {
-  border-collapse: collapse;
+	border-collapse: collapse;
 }
 
 td {
-  background: #50A576;
-  border: 1px solid #d4fcdb;
-  min-width: 24px;
-  height: 27px;
-  text-align: center;
+	background: #5FA070;
+	border: 2px groove #B0D3BF;
+	min-width: 2rem;
+	height: 2.1rem;
+	text-align: center;
+	text-shadow: 1px 1px #666;
+	font-size: 1.3rem;
 }
 
-.input_letter {
-  cursor: pointer;
-  font-weight: bold;
-  display: inline-block;
-  margin: 5px;
-  padding: 5px;
-  border: 1px solid orange;
-  background-color: white;
-  color: initial;
-  width: 18px;
-  height: 18px;
-  text-align: center;
+.puzzleSquare {
+	margin: 5px 5px 5px 0;
+	height: 7vw;
+	width: 7vw;
+	text-transform: uppercase;
+	background-color: white;
+	border: 1px solid black;
+	font: 5vw sans-serif;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: inset 1px 1px 1px 1px rgb(255 255 255 / 46%), inset -1px -1px 1px 1px rgb(0 0 0 / 26%);
+	border: 1px solid rgba(0, 0, 0, 0.65);
+}
+
+@media only screen and (min-width: 600px) {
+	.puzzleSquare {
+		height: 3rem;
+		width: 3rem;
+		font: 2rem sans-serif;
+	}
+}
+
+#input_container .puzzleSquare:hover {
+		background-color: orange;
 }
 
 #input_container {
-  display: none;
-  border: 1px solid;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: black;
-  color: white;
-  opacity: 0.7;
+	display: none;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: black;
+	color: white;
+	opacity: 0.9;
 }
 
-.hand_letter {
-  background: #f3e797;
-  font-weight: bold;
-  display: inline-block;
-  text-align: left;
-  margin: 10px;
-  width: 24px;
-  height: 24px;
-  padding-top: 7px;
-  padding-left: 9px;
-}
 .hand_letter_points {
-  display: inline;
-  font-size: 8pt;
+	display: inline;
+	font-size: 8pt;
 }
 
 .letters_left {
-  display: inline-block;
-  margin-left: 102px;
-  width: 301px;
+	display: inline-block;
+	margin-left: 102px;
+	width: 301px;
 }
 
 .player_name {
-  display: inline-block;
-  margin-left: 5px;
+	display: inline-block;
+	margin-left: 5px;
 }
 
-.tw {
-  background:#FE3130;
+.tw, .tl {
+	background: url("bildoj/3x.gif") no-repeat right bottom;
+	background-blend-mode: overlay;
 }
-.dw {
-  background:#FBC888;
+.tw {
+	background-color: #FF3541;
 }
 .tl {
-  background:#4FCDFF;
+	background-color: #07AAFE;
+}
+.dw, .dl {
+	background: url("bildoj/2x.gif") no-repeat right bottom;
+	background-blend-mode: overlay;
+}
+.dw {
+	background-color: #FBE075;
 }
 .dl {
-  background:#A0E3FD;
+	background-color: #C3E5FC;
 }
 .start {
-  background:#FBC888;
+	background: #FAE07F url("bildoj/stelo.gif") no-repeat center;
+	background-blend-mode: overlay;
 }
 
 .color_instruction {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  margin: 2px;
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	margin: 2px;
 }
 
 .score_container {
-  padding: 10px;
+	padding: 10px;
 }
 
 #board {
-  font-weight: bold;
+	font-weight: normal;
 }
 
 #your_letters {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 
 .input_here {
-  background: #ff0000;
+	background: #ff0000;
 }
 
 .player_set_tile {
-  background: #ff9900;
+	background: #ff9900;
 }
 
 .ki_set_tile {
-  background: #d3f7db;
+	background: #d3f7db;
 }
 
 .language_selector a {
-  color: #2f2f2d;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  display: block;
+	color: #2f2f2d;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	display: block;
 }
 
 img {
-  margin-right: 5px;
+	margin-right: 5px;
 }
 
 .button {
-  box-shadow: rgb(202, 239, 171) 0px 1px 0px 0px inset;
-  border-radius: 3px;
-  border: 1px solid rgb(38, 138, 22);
-  cursor: pointer;
-  font-weight: bold;
-  padding: 6px;
-  background: linear-gradient(rgb(92, 184, 17) 5%, rgb(119, 212, 42) 100%) rgb(92, 184, 17);
+	box-shadow: rgb(202, 239, 171) 0px 1px 0px 0px inset;
+	border-radius: 3px;
+	border: 1px solid rgb(38, 138, 22);
+	cursor: pointer;
+	font-weight: bold;
+	padding: 6px;
+	background: linear-gradient(rgb(92, 184, 17) 5%, rgb(119, 212, 42) 100%) rgb(92, 184, 17);
 }
 
 .button:disabled, .button[disabled] {
-  cursor: auto;
+	cursor: auto;
 }
 
 .game {
-  margin-right: 50px;
+	margin-right: 50px;
 }
 
 .manual {
-  max-width: 550px;
+	max-width: 550px;
 }
 
 h1, h2 {
-  font-size: 100%;
+	font-size: 100%;
 }
 
 .wrapper {
-  max-width: 1150px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-wrap: wrap;
+	max-width: 1150px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
 }
