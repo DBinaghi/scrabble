@@ -30,7 +30,7 @@ var TRANSLATION_MAP = {
     "italian":"triplica valore lettera",
     "esperanto":"triobligi literan valoron"
   },
-  "Doppelter Buchtstabenwert":{
+  "Doppelter Buchstabenwert":{
     "english":"double letter value",
     "italian":"raddoppia valore lettera",
     "esperanto":"duobligi literan valoron"
