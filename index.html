@@ -113,5 +113,16 @@
 
 		<div id="input_container"></div>
 
+		
+		<script>
+			var table = document.getElementById("board");
+			var cells = table.getElementsByTagName("td");
+			for (var i = 0; i < cells.length; ++i) {
+				var cell = cells[i];
+                		if (cell.hasAttribute("title")) {
+                    			cell.setAttribute("title", i18n(cell.getAttribute("title")));
+                		}
+            		}
+		</script>
 	</body>
 </html>
