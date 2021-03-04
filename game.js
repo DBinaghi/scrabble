@@ -29,9 +29,11 @@ var LANGUAGE_CONFIG;
 const LANG_ENGLISH = 'english';
 const LANG_GERMAN = 'german';
 const LANG_ITALIAN = 'italian';
+const LANG_ESPERANTO = 'esperanto';
 const ENGLISH_CONFIG_URL = 'config/english.jsonp';
 const GERMAN_CONFIG_URL = 'config/german.jsonp';
 const ITALIAN_CONFIG_URL = 'config/italian.jsonp';
+const ESPERANTO_CONFIG_URL = 'config/esperanto.jsonp';
 loadLanguageConfig();
 
 function getUrlParameterByName(name, url) {
@@ -120,11 +122,11 @@ function showLetterInput(elem) {
 	var x = parseInt(targetPosition[0]) - 1;
 	var y = parseInt(targetPosition[1]) - 1;
 
-	// if there is already a active tile, remove it.
+	// if there is already an active tile, remove it
 	if (elem.target.classList.contains('player_set_tile')) {
 		var returnedIndex = x * 15 + y;
 		var letter = BOARD_LETTERS[returnedIndex];
-		BOARD_LETTERS[x*15+y] = "";
+		BOARD_LETTERS[x * 15 + y] = "";
 		TO_BE_PLAYED_BOARD_LETTER_INDEXES.splice(TO_BE_PLAYED_BOARD_LETTER_INDEXES.indexOf(returnedIndex), 1);
 		PLAYER_1_LETTERS.push(letter);
 		elem.target.classList.remove('player_set_tile');
@@ -167,7 +169,7 @@ function letterClicked(elem) {
 	var letter = elem.srcElement.innerHTML.substring(0, 1);
 
 	// get target position
-	var targetPosition = targetRect.id.substring(1,targetRect.id.length).split("_");
+	var targetPosition = targetRect.id.substring(1, targetRect.id.length).split("_");
 	var x = parseInt(targetPosition[0]) - 1;
 	var y = parseInt(targetPosition[1]) - 1;
 
@@ -234,12 +236,14 @@ function printBoard() {
 	for (var i = 0; i < 15; i++) {
 		for (var j = 0; j < 15; j++) {
 			var field = BOARD.rows[i].cells[j];
-			field.innerHTML=BOARD_LETTERS[i * 15 + j];
+			field.innerHTML = BOARD_LETTERS[i * 15 + j];
 
 			if (BOARD_LETTERS[i * 15 + j] === '') {
 				field.style.cursor = "pointer";
+			    field.classList.remove('set_tile');
 			} else {
 				field.style.cursor = "auto";
+			    field.classList.add('set_tile');
 			}
 
 			if (TO_BE_PLAYED_BOARD_LETTER_INDEXES.indexOf(i * 15 + j) !== -1) {
@@ -248,7 +252,7 @@ function printBoard() {
 				}
 				field.style.cursor = "no-drop";
 			} else {
-			 field.classList.remove('player_set_tile');
+			    field.classList.remove('player_set_tile');
 			}
 
 			if (LETTERS_PLAYED_BY_AI_INDEXES.indexOf(i * 15 + j) !== -1) {
@@ -262,11 +266,11 @@ function printBoard() {
 	}
 
 	// score
-	document.getElementById("player_1_points").innerHTML = PLAYER_1_POINTS.toString();
-	document.getElementById("player_2_points").innerHTML = PLAYER_2_POINTS.toString();
+	document.getElementById("player_1_points").innerHTML = '<b>' + PLAYER_1_POINTS.toString() + '</b>';
+	document.getElementById("player_2_points").innerHTML = '<b>' + PLAYER_2_POINTS.toString() + '</b>';
 
 	// remaining tiles
-	document.getElementById("letters_left").innerHTML = LETTER_STASH.length.toString();
+	document.getElementById("letters_left").innerHTML = '<b>' + LETTER_STASH.length.toString() + '</b>';
 }
 
 function takeBackCurrentTiles() {
@@ -275,7 +279,7 @@ function takeBackCurrentTiles() {
 		PLAYER_1_LETTERS.push(BOARD_LETTERS[pos]);
 		BOARD_LETTERS[pos] = '';
 	}
-	TO_BE_PLAYED_BOARD_LETTER_INDEXES.length=0;
+	TO_BE_PLAYED_BOARD_LETTER_INDEXES.length = 0;
 	printPlayersLetters();
 	printBoard();
 	updatePlayButton();
@@ -311,16 +315,16 @@ function findWordsAndPointsByActiveLetters() {
 		var letter_multiplier = 1;
 		var word = BOARD_LETTERS[h];
 		if (TO_BE_PLAYED_BOARD_LETTER_INDEXES.indexOf(h) !== -1) {
-			if (document.getElementById("s"+ Math.floor(h/15+1) + "_" + Math.floor(h%15+1)).classList.contains("dl")) {
+			if (document.getElementById("s"+ Math.floor(h / 15 + 1) + "_" + Math.floor(h%15 + 1)).classList.contains("dl")) {
 				letter_multiplier = 2;
 			}
-			if (document.getElementById("s"+ Math.floor(h/15+1) + "_" + Math.floor(h%15+1)).classList.contains("tl")) {
+			if (document.getElementById("s"+ Math.floor(h / 15 + 1) + "_" + Math.floor(h%15 + 1)).classList.contains("tl")) {
 				letter_multiplier = 3;
 			}
-			if (document.getElementById("s"+ Math.floor(h/15+1) + "_" + Math.floor(h%15+1)).classList.contains("dw")) {
+			if (document.getElementById("s"+ Math.floor(h / 15 + 1) + "_" + Math.floor(h%15 + 1)).classList.contains("dw")) {
 				word_multiplier *= 2;
 			}
-			if (document.getElementById("s"+ Math.floor(h/15+1) + "_" + Math.floor(h%15+1)).classList.contains("tw")) {
+			if (document.getElementById("s"+ Math.floor(h / 15 + 1) + "_" + Math.floor(h%15 + 1)).classList.contains("tw")) {
 				word_multiplier *= 3;
 			}
 		}
@@ -329,16 +333,16 @@ function findWordsAndPointsByActiveLetters() {
 		while (BOARD_LETTERS[h] !== "" && (h % 15) !== 0) {
 			letter_multiplier = 1;
 			if (TO_BE_PLAYED_BOARD_LETTER_INDEXES.indexOf(h) !== -1) {
-				if (document.getElementById("s" + Math.floor(h/15+1) + "_" + Math.floor(h%15+1)).classList.contains("dl")) {
+				if (document.getElementById("s" + Math.floor(h / 15 + 1) + "_" + Math.floor(h%15 + 1)).classList.contains("dl")) {
 					letter_multiplier = 2;
 				}
-				if (document.getElementById("s" + Math.floor(h/15+1) + "_" + Math.floor(h%15+1)).classList.contains("tl")) {
+				if (document.getElementById("s" + Math.floor(h / 15 + 1) + "_" + Math.floor(h%15 + 1)).classList.contains("tl")) {
 					letter_multiplier = 3;
 				}
-				if (document.getElementById("s" + Math.floor(h/15+1) + "_" + Math.floor(h%15+1)).classList.contains("dw")) {
+				if (document.getElementById("s" + Math.floor(h / 15 + 1) + "_" + Math.floor(h%15 + 1)).classList.contains("dw")) {
 					word_multiplier *= 2;
 				}
-				if (document.getElementById("s" + Math.floor(h/15+1) + "_" + Math.floor(h%15+1)).classList.contains("tw")) {
+				if (document.getElementById("s" + Math.floor(h / 15 + 1) + "_" + Math.floor(h%15 + 1)).classList.contains("tw")) {
 					word_multiplier *= 3;
 				}
 			}
@@ -366,16 +370,16 @@ function findWordsAndPointsByActiveLetters() {
 		while (BOARD_LETTERS[v] !== "" && v < 225) {
 			letter_multiplier = 1;
 			if (TO_BE_PLAYED_BOARD_LETTER_INDEXES.indexOf(v) !== -1) {
-				if (document.getElementById("s" + Math.floor(v/15+1) + "_" + Math.floor(v%15+1)).classList.contains("dl")) {
+				if (document.getElementById("s" + Math.floor(v / 15 + 1) + "_" + Math.floor(v%15 + 1)).classList.contains("dl")) {
 					letter_multiplier = 2;
 				}
-				if (document.getElementById("s" + Math.floor(v/15+1) + "_" + Math.floor(v%15+1)).classList.contains("tl")) {
+				if (document.getElementById("s" + Math.floor(v / 15 + 1) + "_" + Math.floor(v%15 + 1)).classList.contains("tl")) {
 					letter_multiplier = 3;
 				}
-				if (document.getElementById("s" + Math.floor(v/15+1) + "_" + Math.floor(v%15+1)).classList.contains("dw")) {
+				if (document.getElementById("s" + Math.floor(v / 15 + 1) + "_" + Math.floor(v%15 + 1)).classList.contains("dw")) {
 					word_multiplier *= 2;
 				}
-				if (document.getElementById("s" + Math.floor(v/15+1) + "_" + Math.floor(v%15+1)).classList.contains("tw")) {
+				if (document.getElementById("s" + Math.floor(v / 15 + 1) + "_" + Math.floor(v%15 + 1)).classList.contains("tw")) {
 					word_multiplier *= 3;
 				}
 			}
@@ -531,8 +535,8 @@ function startAiMove() {
 }
 
 function onLetterToSwapClicked(elem) {
-	if (elem.srcElement.style.background !== 'yellow') {
-		elem.srcElement.style.background = 'yellow';
+	if (elem.srcElement.style.background !== 'orange') {
+		elem.srcElement.style.background = 'orange';
 		elem.srcElement.classList.add('selected_to_switch');
 	} else {
 		elem.srcElement.style.background = '';
@@ -548,7 +552,7 @@ function onSelectSwapTilesClicked() {
 		return;
 	}
 
-	var buttons=document.getElementsByClassName('hand_letter');
+	var buttons=document.getElementsByClassName('puzzleSquare');
 	for (var i = 0; i < buttons.length; i++) {
 		buttons[i].onclick = onLetterToSwapClicked;
 	}
