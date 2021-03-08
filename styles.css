@@ -9,7 +9,7 @@ table {
 }
 
 td {
-	background: #5FA070;
+	background-color: #5FA070;
 	border: 2px groove #B0D3BF;
 	min-width: 2rem;
 	height: 2.1rem;
@@ -77,28 +77,286 @@ td {
 }
 
 .tw, .tl {
-	background: url("bildoj/3x.gif") no-repeat right bottom;
-	background-blend-mode: overlay;
+	background: url("bildoj/3x_w.gif") center center no-repeat;
+	background-blend-mode: normal;
 }
+
 .tw {
-	background-color: #FF3541;
+	background-color: #AD2131;
 }
+
 .tl {
-	background-color: #07AAFE;
+	background-color: #0433FF;
 }
+
 .dw, .dl {
-	background: url("bildoj/2x.gif") no-repeat right bottom;
-	background-blend-mode: overlay;
+	background: url("bildoj/2x.gif") center center no-repeat;
+	background-blend-mode: normal;
 }
+
 .dw {
-	background-color: #FBE075;
+	background-color: #E896B1;
 }
+
 .dl {
-	background-color: #C3E5FC;
+	background-color: #00FFFF;
 }
+
 .start {
-	background: #FAE07F url("bildoj/stelo.gif") no-repeat center;
-	background-blend-mode: overlay;
+	background: #E896B1 url("bildoj/stelo.gif") center center no-repeat;
+}
+
+.tw_u {
+    background: url("bildoj/tw_a_u.gif") center bottom;
+}
+
+.tw_d {
+    background: url("bildoj/tw_a_d.gif") center top;
+}
+
+.tw_l {
+    background: url("bildoj/tw_a_l.gif") right center;
+}
+
+.tw_r {
+    background: url("bildoj/tw_a_r.gif") left center;
+}
+
+.tl_u {
+    background: url("bildoj/tl_a_u.gif") center bottom;
+}
+
+.tl_d {
+    background: url("bildoj/tl_a_d.gif") center top;
+}
+
+.tl_l {
+    background: url("bildoj/tl_a_l.gif") right center;
+}
+
+.tl_r {
+    background: url("bildoj/tl_a_r.gif") left center;
+}
+
+.dl_u {
+    background: url("bildoj/dl_a_u.gif") center bottom;
+}
+
+.dl_d {
+    background: url("bildoj/dl_a_d.gif") center top;
+}
+
+.dl_l {
+    background: url("bildoj/dl_a_l.gif") right center;
+}
+
+.dl_r {
+    background: url("bildoj/dl_a_r.gif") left center;
+}
+
+.dwdw_ur {
+    background-image: url("bildoj/dw_a_d.gif"), url("bildoj/dw_a_l.gif");
+    background-position: center top, right center;
+}
+
+.dwdw_dr {
+    background-image: url("bildoj/dw_a_u.gif"), url("bildoj/dw_a_l.gif");
+    background-position: center bottom, right center;
+}
+
+.dwdw_dl {
+    background-image: url("bildoj/dw_a_u.gif"), url("bildoj/dw_a_r.gif");
+    background-position: center bottom, left center;
+}
+
+.dwdw_ul {
+    background-image: url("bildoj/dw_a_d.gif"), url("bildoj/dw_a_r.gif");
+    background-position: center top, left center;
+}
+
+.twdw_dl {
+    background-image: url("bildoj/tw_a_d.gif"), url("bildoj/dw_a_l.gif");
+    background-position: center top, right center;
+}
+
+.twdw_ru {
+    background-image: url("bildoj/tw_a_r.gif"), url("bildoj/dw_a_u.gif");
+    background-position: left center, center bottom;
+}
+
+.dwtw_ul {
+    background-image: url("bildoj/dw_a_u.gif"), url("bildoj/tw_a_l.gif");
+    background-position: center bottom, right center;
+}
+
+.dwtw_rd {
+    background-image: url("bildoj/dw_a_r.gif"), url("bildoj/tw_a_d.gif");
+    background-position: left center, center top;
+}
+
+.tldl_dl {
+    background-image: url("bildoj/tl_a_d.gif"), url("bildoj/dl_a_l.gif");
+    background-position: center top, right center;
+}
+
+.dltl_rd {
+    background-image: url("bildoj/dl_a_r.gif"), url("bildoj/tl_a_d.gif");
+    background-position: left center, center top;
+}
+
+.tldl_ru {
+    background-image: url("bildoj/tl_a_r.gif"), url("bildoj/dl_a_u.gif");
+    background-position: left center, center bottom;
+}
+
+.dltl_ul {
+    background-image: url("bildoj/dl_a_u.gif"), url("bildoj/tl_a_l.gif");
+    background-position: center bottom, right center;
+}
+
+.dldldl_ldr {
+    background-image: url("bildoj/dl_a_r.gif"),url("bildoj/dl_a_u.gif"), url("bildoj/dl_a_l.gif");
+    background-position: left center, center bottom, right center;
+}
+
+.dldl_ur {
+    background-image: url("bildoj/dl_a_d.gif"), url("bildoj/dl_a_l.gif");
+    background-position: center top, right center;
+}
+
+.dldl_lu {
+    background-image: url("bildoj/dl_a_r.gif"), url("bildoj/dl_a_d.gif");
+    background-position: left center, center top;
+}
+
+.dwtl_ld {
+    background-image: url("bildoj/dw_a_r.gif"), url("bildoj/tl_a_u.gif");
+    background-position: left center, center bottom;
+}
+
+.tldw_dr {
+    background-image: url("bildoj/tl_a_u.gif"), url("bildoj/dw_a_l.gif");
+    background-position: center bottom, right center;
+}
+
+.dwtl_ur {
+    background-image: url("bildoj/dw_a_d.gif"), url("bildoj/tl_a_l.gif");
+    background-position: center top, right center;
+}
+
+.tldw_lu {
+    background-image: url("bildoj/tl_a_r.gif"), url("bildoj/dw_a_d.gif");
+    background-position: left center, center top;
+}
+
+.dldl_ld {
+    background-image: url("bildoj/dl_a_r.gif"), url("bildoj/dl_a_u.gif");
+    background-position: left center, center bottom;
+}
+
+.dldwdl_ldr {
+    background-image: url("bildoj/dl_a_r.gif"), url("bildoj/dw_a_u.gif"), url("bildoj/dl_a_l.gif");
+    background-position: left center, center bottom, right center;
+}
+
+.dldl_dr {
+    background-image: url("bildoj/dl_a_u.gif"), url("bildoj/dl_a_l.gif");
+    background-position: center bottom, right center;
+}
+
+.dldldl_urd {
+    background-image: url("bildoj/dl_a_d.gif"), url("bildoj/dl_a_l.gif"), url("bildoj/dl_a_u.gif");
+    background-position: center top, right center, center bottom;
+}
+
+.dldwdl_urd {
+    background-image: url("bildoj/dl_a_d.gif"), url("bildoj/dw_a_l.gif"), url("bildoj/dl_a_u.gif");
+    background-position: center top, right center, center bottom;
+}
+
+.dldwdl_uld {
+    background-image: url("bildoj/dl_a_d.gif"), url("bildoj/dw_a_r.gif"), url("bildoj/dl_a_u.gif");
+    background-position: center top, left center, center bottom;
+}
+
+.dldldl_uld {
+    background-image: url("bildoj/dl_a_d.gif"), url("bildoj/dl_a_r.gif"), url("bildoj/dl_a_u.gif");
+    background-position: center top, left center, center bottom;
+}
+
+.dldwdl_lur {
+    background-image: url("bildoj/dl_a_r.gif"), url("bildoj/dw_a_d.gif"), url("bildoj/dl_a_l.gif");
+    background-position: left center, center top, right center;
+}
+
+.tldl_dr {
+    background-image: url("bildoj/tl_a_u.gif"), url("bildoj/dl_a_l.gif");
+    background-position: center bottom, right center;
+}
+
+.dltl_ld {
+    background-image: url("bildoj/dl_a_r.gif"), url("bildoj/tl_a_u.gif");
+    background-position: left center, center bottom;
+}
+
+.tldl_lu {
+    background-image: url("bildoj/tl_a_r.gif"), url("bildoj/dl_a_d.gif");
+    background-position: left center, center top;
+}
+
+.dltl_ur {
+    background-image: url("bildoj/dl_a_d.gif"), url("bildoj/tl_a_l.gif");
+    background-position: center top, right center;
+}
+
+.dwtl_dr {
+    background-image: url("bildoj/dw_a_u.gif"), url("bildoj/tl_a_l.gif");
+    background-position: center bottom, right center;
+}
+
+.tldw_ld {
+    background-image: url("bildoj/tl_a_r.gif"), url("bildoj/dw_a_u.gif");
+    background-position: left center, center bottom;
+}
+
+.dwtl_lu {
+    background-image: url("bildoj/dw_a_r.gif"), url("bildoj/tl_a_d.gif");
+    background-position: left center, center top;
+}
+
+.tldw_ur {
+    background-image: url("bildoj/tl_a_d.gif"), url("bildoj/dw_a_l.gif");
+    background-position: center top, right center;
+}
+
+.dldldl_lur {
+    background-image: url("bildoj/dl_a_r.gif"), url("bildoj/dl_a_d.gif"), url("bildoj/dl_a_l.gif");
+    background-position: left center, center top, right center;
+}
+
+.twdw_dr {
+    background-image: url("bildoj/tw_a_u.gif"), url("bildoj/dw_a_l.gif");
+    background-position: center bottom, right center;
+}
+
+.dwtw_ld {
+    background-image: url("bildoj/dw_a_r.gif"), url("bildoj/tw_a_u.gif");
+    background-position: left center, center bottom;
+}
+
+.twdw_lu {
+    background-image: url("bildoj/tw_a_r.gif"), url("bildoj/dw_a_d.gif");
+    background-position: left center, center top;
+}
+
+.dwtw_ur {
+    background-image: url("bildoj/dw_a_d.gif"), url("bildoj/tw_a_l.gif");
+    background-position: center top, right center;
+}
+
+.tw_u, .tw_d, .tw_l, .tw_r, .tl_u, .tl_d, .tl_l, .tl_r, .dl_u, .dl_d, .dl_l, .dl_r, .dwdw_ur, .dwdw_ul, .dwdw_dr, .dwdw_dl, .dwdw_ul, .twdw_dl, .twdw_ru, .twdw_ru, .dwtw_ul, .dwtw_rd, .tldl_dl, .dltl_rd, .tldl_ru, .dltl_ul, .dldldl_ldr, .dldl_ur, .dldl_lu, .dwtl_ld, .tldw_dr, .dwtl_ur, .tldw_lu, .dldl_ld, .dldwdl_ldr, .dldl_dr, .dldldl_urd, .dldwdl_urd, .dldwdl_uld, .dldldl_uld, .dldwdl_lur, .tldl_dr, .dltl_ld, .tldl_lu, .dltl_ur, .dwtl_dr, .tldw_ld, .dwtl_lu, .tldw_ur, .dldldl_lur, .twdw_dr, .dwtw_ld, .twdw_lu, .dwtw_ur {
+    background-color: #5FA070;
+    background-repeat: no-repeat;
 }
 
 .color_instruction {
