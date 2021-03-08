@@ -1,6 +1,7 @@
 /**
 
  Copyright 2014-2018 David Edler
+ Copyright 2021 Daniele Binaghi
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -515,7 +516,7 @@ function startAiMove() {
 
 	updatePlayButton();
 
-	document.getElementById("input_container").innerHTML='waiting for a.i.';
+	document.getElementById("input_container").innerHTML = i18n('warten auf ki');
 	document.getElementById("input_container").style.display= "block";
 
 	setTimeout(
@@ -609,7 +610,7 @@ function endGame() {
 		PLAYER_2_POINTS -= POINTS_PER_LETTER[letter];
 	}
 
-	document.getElementById("input_container").innerHTML='game over <a href="./" style="color:#ff9900">start new game</a>';
+	document.getElementById("input_container").innerHTML = i18n('Spiel ist aus') + '<a href="./" style="color:#ff9900">' + i18n('neues Spiel starten') + '</a>';
 	document.getElementById("input_container").style.display= "block";
 
 	document.getElementById("move").disabled = true;
