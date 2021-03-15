@@ -51,14 +51,14 @@ var TRANSLATION_MAP = {
 		"esperanto":"Kiun literon vi volas aldoni?"
 	},
 	"DU":{
-		"english":"You",
-		"italian":"Tu",
-		"esperanto":"Vi"
+		"english":"Your score",
+		"italian":"Punteggio tuo",
+		"esperanto":"Viaj poentoj"
 	},
 	"KI":{
-		"english":"A.I.",
-		"italian":"Computer",
-		"esperanto":"Komputilo"
+		"english":"A.I.'s score",
+		"italian":"Punteggio computer",
+		"esperanto":"Komputilaj poentoj"
 	},
 	"Wähle die Buchstaben aus, welche Du tauschen möchtest, dann klicke hier":{
 		"english":"Choose the letters you want to swap, then click here",
@@ -119,6 +119,11 @@ var TRANSLATION_MAP = {
 		"english":"Inserting the first word",
 		"italian":"Inserire la prima parola",
 		"esperanto":"Aldoni la unuan vorton"
+	},
+	"Spielanweisungen":{
+			"english":"Game instructions",
+			"italian":"Istruzioni di gioco",
+			"esperanto":"Ludaj instrukcioj"
 	},
 	"Dies ist ein Kreuzworträtsel, das gegen einen Computer-Herausforderer gespielt werden kann. Kacheln, die Buchstaben mit verschiedenen Werten darstellen, werden verwendet, um Wörter auf der Tafel zu bilden, die wie in einem Kreuzworträtsel miteinander verbunden sind. Durch gekonntes Verwenden und Kombinieren der Buchstabenwerte und der Preistabellen sollten so viele Punkte wie möglich erzielt werden.":{
 			"english":"This is a crossword puzzle that can be played against a computer challenger. Tiles representing letters of various values are used to make words on the board that are interconnected as in a crossword puzzle. As many points as possible should be achieved by skilfully using and combining the letter values and the prize tables.",
@@ -189,5 +194,10 @@ var TRANSLATION_MAP = {
 		"english":"Start a new game",
 		"italian":"Gioca di nuovo",
 		"esperanto":"Ludi denove"
+	},
+	"Sie haben keinen Buchstaben gewählt!":{
+		"english":"You did not chose any letter!",
+		"italian":"Non hai scelto alcuna lettera!",
+		"esperanto":"Vi elektis neniun literon!"
 	}
 };
